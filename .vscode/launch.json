@@ -16,7 +16,7 @@
       "request": "launch",
       "mainClass": "com.frankmoley.lil.booting.BootingApplication",
       "projectName": "booting",
-      "args": "--spring.profiles.active=dev"
+      "args": "--spring.profiles.active=prod"
     }
   ]
 }

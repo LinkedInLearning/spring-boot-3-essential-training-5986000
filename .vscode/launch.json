@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "RoomAppApplication",
+      "request": "launch",
+      "mainClass": "com.frankmoley.lil.room_app.RoomAppApplication",
+      "projectName": "room-app"
+    },
+    {
+      "type": "java",
       "name": "FizzbuzzApplication",
       "request": "launch",
       "mainClass": "com.frankmoley.lil.fizzbuzz.FizzbuzzApplication",

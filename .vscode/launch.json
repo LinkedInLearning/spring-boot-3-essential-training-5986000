@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "FizzbuzzApplication",
+      "request": "launch",
+      "mainClass": "com.frankmoley.lil.fizzbuzz.FizzbuzzApplication",
+      "projectName": "fizzbuzz"
+    },
+    {
+      "type": "java",
       "name": "ClrAppApplication",
       "request": "launch",
       "mainClass": "com.frankmoley.lil.clr_app.ClrAppApplication",

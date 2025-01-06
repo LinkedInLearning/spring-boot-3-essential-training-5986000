@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ClrAppApplication",
+      "request": "launch",
+      "mainClass": "com.frankmoley.lil.clr_app.ClrAppApplication",
+      "projectName": "clr-app"
+    },
+    {
+      "type": "java",
       "name": "Current File",
       "request": "launch",
       "mainClass": "${file}"

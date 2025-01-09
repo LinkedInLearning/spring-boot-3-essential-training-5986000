@@ -1,6 +1,7 @@
 package com.frankmoley.lil.roomwebapp;
 
 import com.frankmoley.lil.roomwebapp.data.repository.RoomRepository;
+import com.frankmoley.lil.roomwebapp.data.repository.StaffRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,9 +15,12 @@ public class RoomWebAppApplication {
   }
 
   @Bean
-  public CommandLineRunner run(RoomRepository roomRepository){
+  public CommandLineRunner run(RoomRepository roomRepository, StaffRepository staffRepository){
     return args -> {
+      System.out.println("**** ROOMS ****");
       roomRepository.findAll().forEach(System.out::println);
+      System.out.println("\n\n**** STAFF ****");
+      staffRepository.findAll().forEach(System.out::println);
     };
   }
 

@@ -2,6 +2,7 @@ package com.frankmoley.lil.roomwebapp.web.controller;
 
 import com.frankmoley.lil.roomwebapp.data.entity.RoomEntity;
 import com.frankmoley.lil.roomwebapp.data.repository.RoomRepository;
+import com.frankmoley.lil.roomwebapp.service.RoomService;
 import com.frankmoley.lil.roomwebapp.web.model.Room;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,18 +15,15 @@ import java.util.List;
 @RequestMapping("/rooms")
 public class RoomController {
 
-  private final RoomRepository roomRepository;
+  private final RoomService roomService;
 
-  public RoomController(RoomRepository roomRepository) {
-    this.roomRepository = roomRepository;
+  public RoomController(RoomService roomService) {
+    this.roomService = roomService;
   }
 
   @GetMapping
   public String getRoomsPage(Model model){
-    List<RoomEntity> roomEntities = this.roomRepository.findAll();
-    List<Room> rooms = new ArrayList<>(roomEntities.size());
-    roomEntities.forEach(e-> rooms.add(new Room(e.getRoomId(), e.getName(), e.getNumber(), e.getBedInfo())));
-    model.addAttribute("rooms", rooms);
+    model.addAttribute("rooms", this.roomService.getAllRooms());
     return "rooms";
   }
 }

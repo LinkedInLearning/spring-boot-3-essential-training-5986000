@@ -5,7 +5,13 @@
   <title>Landon Hotel | Staff View</title>
 </head>
 <body>
-
+<header>
+  <a th:href="@{/}" href="#">Home</a>
+  <form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out">
+  </form>
+</header>
+<h1>Staff</h1>
 <table>
   <tr>
     <th>Employee Number</th>

@@ -5,6 +5,13 @@
   <title>Landon Hotel | Rooms</title>
 </head>
 <body>
+<header>
+  <a th:href="@{/}" href="#">Home</a>
+  <form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out">
+  </form>
+</header>
+<h1>Rooms</h1>
   <table>
     <tr>
       <th>Room Number</th>
